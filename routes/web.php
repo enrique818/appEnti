@@ -62,6 +62,7 @@ Route::middleware(['auth'])->prefix('panel')->group(function() {
      Route::prefix('servicios/')->name('servicios.')->group(function() {
         Route::get('/fundraising', 'UserController@servicios')->name('services');
         Route::get('/valoración-StartUp', 'UserController@valoracion')->name('assessment');
+        Route::get('/diagnóstico-financiero', 'UserController@diagnostico')->name('diagnosis');
     });
      Route::prefix('proyectos/')->name('proyectos.')->group(function() {
         Route::get('/proyectos-en-marcha', 'UserController@proyectos')->name('march');

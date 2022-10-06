@@ -490,6 +490,10 @@ class UserController extends Controller
     {
         return view('template.panel.servicios.assessment');
     }
+    public function diagnostico()
+    {
+        return view('template.panel.servicios.diagnosis');
+    }
      public function proyectos()
     {
         return view('template.panel.proyectos.march');
