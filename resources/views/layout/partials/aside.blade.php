@@ -131,6 +131,14 @@
 												<span class="menu-title">Fundraising</span>
 											</a>
 										</div>
+										<div class="menu-item">
+											<a class="menu-link @if(Route::is('servicios.assessment')) active @endif" href="{{route('servicios.assessment')}}">
+												<span class="menu-icon">
+													<i class="fas fa-briefcase"></i>
+												</span>
+												<span class="menu-title">Valoración StartUp</span>
+											</a>
+										</div>
 										@endif
 										@can('admin', App\Models\User::class)
 										<div class="menu-item">
