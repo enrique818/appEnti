@@ -136,7 +136,7 @@
 												<span class="menu-icon">
 													<i class="fas fa-briefcase"></i>
 												</span>
-												<span class="menu-title">Valoración StartUp</span>
+												<span class="menu-title">Valoración de Startups</span>
 											</a>
 										</div>
 										<div class="menu-item">

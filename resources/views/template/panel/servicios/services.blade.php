@@ -6,12 +6,12 @@
     		<div style="border-radius: 10%;" class="card text-center">
     			<div class="card-body text-center">
     				<div class="d-flex flex-wrap">
-    
-            <div class="d-flex flex-column flex-center w-100 min-h-300px min-h-lg-200px px-9"> 
-    		<div class="text-center mb-1 mb-lg-1 py-1 py-lg-1">
+                    <br>
+                    <br>
+            <div class="text-center mb-3 mb-lg-3 py-3 py-lg-3">
             <h1 style="color:#38076D;" class="lh-base fw-bolder fs-1x fs-lg-1x mb-1">Sin gastos fijos, sin cobrarte nada por adelantado, sin costos escondidos, en <strong>En</strong><span class="text-primary">ti</span> te ayudamos de forma personalizada a levantar capital para tu startup</span>
             </div>
-        </div>
+        
      	   <div class="d-flex flex-column flex-center w-100 min-h-3px min-h-lg-3px px-3">
         <div class="text-center mb-5 mb-lg-5 py-5 py-lg-7">
             <h1 style="color:#38076D;" class="lh-base fw-bolder fs-1x fs-lg-1x mb-1">Únicamente comisionamos si logramos traer capital a tu compañía</span>
@@ -19,7 +19,7 @@
         </div>
            <div class="d-flex flex-column flex-center w-100 min-h-3px min-h-lg-3px px-3">
        <div class="text-center mb-1 mb-lg-2 py-2 py-lg-1">
-            <h1 style="color:#38076D;" class="lh-base fw-bolder fs-1x fs-lg-1x mb-1">Contacta al equipo <strong>En</strong><span class="text-primary">ti</span> para conocer cómo te podemos ayudar</span>
+            <h1 style="color:#38076D;" class="lh-base fw-bolder fs-1x fs-lg-1x mb-1">Contacta al equipo <strong>En</strong><span class="text-primary">ti</span> para conocer cómo te podemos ayudar</strong>
             </div>
         </div>
         <div class="d-flex flex-column flex-center w-100 min-h-3px min-h-lg-3px px-3">
