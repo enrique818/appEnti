@@ -83,6 +83,7 @@
 												<span class="menu-title">Mis Chats</span>
 											</a>
 										</div>
+										@if(auth()->user()->perfil == 'startup' || auth()->user()->isAdmin)
 										<div class="menu-item">
 											<div class="menu-content pt-8 pb-2">
 												<span class="menu-section text-muted text-uppercase fs-8 ls-1">Cursos</span>
@@ -116,8 +117,7 @@
 												</span>
 												<span class="menu-title">Buscar Alianzas</span>
 											</a>
-										</div>
-											@if(auth()->user()->perfil == 'startup' || auth()->user()->isAdmin)
+										</div>											
 											<div class="menu-item">
 											<div class="menu-content pt-8 pb-2">
 												<span class="menu-section text-muted text-uppercase fs-8 ls-1">Servicios En<span class="text-primary">ti</span></span>
@@ -145,6 +145,19 @@
 													<i class="fas fa-briefcase"></i>
 												</span>
 												<span class="menu-title">Diagnóstico financiero</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<div class="menu-content pt-8 pb-2">
+												<span class="menu-section text-muted text-uppercase fs-8 ls-1">Herramientas En<span class="text-primary">ti</span></span>
+											</div>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link @if(Route::is('documentos.documents')) active @endif" href="{{route('documentos.documents')}}">
+												<span class="menu-icon">
+													<i class="fas fa-file-alt"></i>
+												</span>
+												<span class="menu-title">Documentos y Plantillas</span>
 											</a>
 										</div>
 										@endif

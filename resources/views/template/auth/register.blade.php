@@ -458,7 +458,7 @@
 										</x-select>
 
 										<div id="experticia">
-											<div class="row px-3">							
+											<div class="mt-4">							
 												<h5>Tipo de Experticia (puedes seleccionar mas de una opción)</h5>
 												<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
 												    <input name="experticia[]" class="form-check-input" type="checkbox" value="1"/>
@@ -519,13 +519,14 @@
 											</x-slotvalues>
 										</x-select>
 
- --}}										<x-select name="estado" label="Estado del emprendimiento" placeholder="Selecciona el estado">
-											<x-slot name="values">
-												<option value="marcha">Negocio en marcha</option>
-												<option value="idea">Idea de Negocio</option>
-											</x-slotvalues>
-										</x-select>
+ --}}										
 										<div id="startupcont">
+											<x-select name="estado" label="Estado del emprendimiento" placeholder="Selecciona el estado">
+												<x-slot name="values">
+													<option value="marcha">Negocio en marcha</option>
+													<option value="idea">Idea de Negocio</option>
+												</x-slotvalues>
+											</x-select>
 											<x-select name="ventas" label="Ventas Anuales" placeholder="Seleccione la cantidad de ventas anuales">
 												<x-slot name="values">
 													<option value="">Seleccione la cantidad de ventas anuales</option>
@@ -569,7 +570,7 @@
 
 
 										<div id="firmacont">
-											<div class="row px-3">
+											<div class="mt-4">
 												<h5>Tipo de Capital (puedes seleccionar mas de una opción)</h5>
 												<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
 												    <input name="tipo_capital[]" class="form-check-input" type="checkbox" value="1"/>
@@ -604,7 +605,7 @@
 											</div>
 										</div>
 										<div id="inversionistacont">
-											<div class="row px-3">
+											<div class="mt-4">
 												<h5>Tipo de Formación (puedes seleccionar mas de una opción)</h5>
 												<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
 												    <input name="formacion[]" class="form-check-input" type="checkbox" value="1"/>
@@ -669,7 +670,7 @@
 												</x-slotvalues>
 											</x-select>
 											<div id="platforms">
-											<div class="row px-3">							
+											<div class="mt-4">							
 												<h5>Tipo de plataforma (puedes seleccionar mas de una opción)</h5>
 												<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
 												    <input name="social_platform[]" class="form-check-input" type="checkbox" value="1"/>

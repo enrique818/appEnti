@@ -142,35 +142,35 @@
 					@endif
 				@endif
 				@if($user->perfil == 'firma')
-					<div class="row px-3">
-						<h5>Tipo de Capital</h5>
+					<div class="mt-4">
+						<h3 class="text-muted">Tipo de Capital</h3>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
 						    <input disabled @if($user->tipo_capital & 1) checked @endif name="tipo_capital[]" class="form-check-input" type="checkbox" value="1"/>
-						    <span class="form-check-label">
+						    <span class="form-check">
 						        {{__('categorias.tipo_capital.1')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
 						    <input disabled @if($user->tipo_capital & 2) checked @endif name="tipo_capital[]" class="form-check-input" type="checkbox" value="2"/>
-						    <span class="form-check-label">
+						    <span class="form-check">
 						        {{__('categorias.tipo_capital.2')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
 						    <input disabled @if($user->tipo_capital & 4) checked @endif name="tipo_capital[]" class="form-check-input" type="checkbox" value="4"/>
-						    <span class="form-check-label">
+						    <span class="form-check">
 						        {{__('categorias.tipo_capital.4')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
 						    <input disabled @if($user->tipo_capital & 8) checked @endif name="tipo_capital[]" class="form-check-input" type="checkbox" value="8"/>
-						    <span class="form-check-label">
+						    <span class="form-check">
 						        {{__('categorias.tipo_capital.8')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
 						    <input disabled @if($user->tipo_capital & 16) checked @endif name="tipo_capital[]" class="form-check-input" type="checkbox" value="16"/>
-						    <span class="form-check-label">
+						    <span class="form-check">
 						        {{__('categorias.tipo_capital.16')}}
 						    </span>
 						</label>
@@ -194,32 +194,32 @@
 					<div class="row px-3">
 						<h5>Tipo de Formación</h5>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->formacion & 1) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="1"/>
-						    <span class="form-check-label">
+						    <input disabled @if($user->formacion & 1) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="1"/>
+						    <span class="form-check">
 						        {{__('categorias.formacion.1')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->formacion & 2) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="2"/>
-						    <span class="form-check-label">
+						    <input disabled @if($user->formacion & 2) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="2"/>
+						    <span class="form-check">
 						        {{__('categorias.formacion.2')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->formacion & 4) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="4"/>
-						    <span class="form-check-label">
+						    <input disabled @if($user->formacion & 4) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="4"/>
+						    <span class="form-check">
 						        {{__('categorias.formacion.4')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->formacion & 8) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="8"/>
-						    <span class="form-check-label">
+						    <input disabled @if($user->formacion & 8) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="8"/>
+						    <span class="form-check">
 						        {{__('categorias.formacion.8')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->formacion & 16) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="16"/>
-						    <span class="form-check-label">
+						    <input disabled @if($user->formacion & 16) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="16"/>
+						    <span class="form-check">
 						        {{__('categorias.formacion.16')}}
 						    </span>
 						</label>
@@ -238,6 +238,41 @@
 						<p class="fw-bolder">{{$user->seguidores}}</p>
 					</div>
 					@endif
+				@endif
+				@if($user->perfil == 'influencer')
+					<div class="mt-4">
+						<h3 class="text-muted">Tipo de plataforma</h3>
+						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
+						    <input disabled @if($user->social_platform & 1) checked @endif name="social_platform[]" class="form-check-input" type="checkbox" value="1"/>
+						    <span class="form-check">
+						        {{__('categorias.sociales.1')}}
+						    </span>
+						</label>
+						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
+						    <input disabled @if($user->social_platform & 2) checked @endif name="social_platform[]" class="form-check-input" type="checkbox" value="2"/>
+						    <span class="form-check">
+						        {{__('categorias.sociales.2')}}
+						    </span>
+						</label>
+						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
+						    <input disabled @if($user->social_platform & 4) checked @endif name="social_platform[]" class="form-check-input" type="checkbox" value="4"/>
+						    <span class="form-check">
+						        {{__('categorias.sociales.4')}}
+						    </span>
+						</label>
+						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
+						    <input disabled @if($user->social_platform & 16) checked @endif name="social_platform[]" class="form-check-input" type="checkbox" value="16"/>
+						    <span class="form-check">
+						        {{__('categorias.sociales.16')}}
+						    </span>
+						</label>
+						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
+						    <input disabled @if($user->social_platform & 32) checked @endif name="social_platform[]" class="form-check-input" type="checkbox" value="32"/>
+						    <span class="form-check">
+						        {{__('categorias.sociales.32')}}
+						    </span>
+						</label>
+					</div>
 				@endif
 
 				@if($user->tieneSocial)

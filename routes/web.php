@@ -55,6 +55,9 @@ Route::middleware(['auth'])->prefix('panel')->group(function() {
     Route::prefix('cursos/')->name('cursos.')->group(function() {
         Route::get('buscar', 'UserController@buscarCursos')->name('search');
         Route::get('mis-cursos', 'UserController@cursos')->name('mine');
+        Route::get('categoria-cursos', 'UserController@verCursos')->name('grade');
+        Route::get('detalle-cursos', 'UserController@detalleCursos')->name('detail');
+       
     });
     Route::prefix('alianzas/')->name('alianzas.')->group(function() {
         Route::get('/buscar', 'UserController@alianzas')->name('search');
@@ -63,6 +66,9 @@ Route::middleware(['auth'])->prefix('panel')->group(function() {
         Route::get('/fundraising', 'UserController@servicios')->name('services');
         Route::get('/valoración-StartUp', 'UserController@valoracion')->name('assessment');
         Route::get('/diagnóstico-financiero', 'UserController@diagnostico')->name('diagnosis');
+    });
+    Route::prefix('documentos/')->name('documentos.')->group(function() {
+        Route::get('/documentos-y-plantillas', 'UserController@documentos')->name('documents');        
     });
      Route::prefix('proyectos/')->name('proyectos.')->group(function() {
         Route::get('/proyectos-en-marcha', 'UserController@proyectos')->name('march');

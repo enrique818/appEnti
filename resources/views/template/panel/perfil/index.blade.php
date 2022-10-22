@@ -249,46 +249,46 @@
 						<p class="fw-bolder">{{$user->precio}}</p>
 					</div>
 					@endif
-					<div class="row px-3">
+					<div class="mt-4">
 						<h3 class="text-muted">Tipo de experticia</h3>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->experticia & 1) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="1"/>
+						    <input disabled @if($user->experticia & 1) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="1"/>
 						    <span class="form-check">
 						        {{__('categorias.experticia.1')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->experticia & 2) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="2"/>
+						    <input disabled @if($user->experticia & 2) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="2"/>
 						    <span class="form-check">
 						        {{__('categorias.experticia.2')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->experticia & 4) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="4"/>
+						    <input disabled @if($user->experticia & 4) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="4"/>
 						    <span class="form-check">
 								{{__('categorias.experticia.4')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->experticia & 8) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="8"/>
+						    <input disabled @if($user->experticia & 8) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="8"/>
 						    <span class="form-check">
 								{{__('categorias.experticia.8')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->experticia & 16) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="16"/>
+						    <input disabled @if($user->experticia & 16) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="16"/>
 						    <span class="form-check">
 						        {{__('categorias.experticia.16')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->experticia & 32) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="32"/>
+						    <input disabled @if($user->experticia & 32) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="32"/>
 						    <span class="form-check">
 								{{__('categorias.experticia.32')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->experticia & 64) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="64"/>
+						    <input disabled @if($user->experticia & 64) checked @endif name="experticia[]" class="form-check-input" type="checkbox" value="64"/>
 						    <span class="form-check">
 								{{__('categorias.experticia.64')}}
 						    </span>
@@ -319,31 +319,31 @@
 					<div class="row px-3">
 						<h5>Tipo de Formación</h5>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->formacion & 1) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="1"/>
+						    <input disabled @if($user->formacion & 1) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="1"/>
 						    <span class="form-check">
 						        {{__('categorias.formacion.1')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->formacion & 2) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="2"/>
+						    <input disabled @if($user->formacion & 2) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="2"/>
 						    <span class="form-check">
 						        {{__('categorias.formacion.2')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->formacion & 4) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="4"/>
+						    <input disabled @if($user->formacion & 4) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="4"/>
 						    <span class="form-check">
 						        {{__('categorias.formacion.4')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->formacion & 8) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="8"/>
+						    <input disabled @if($user->formacion & 8) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="8"/>
 						    <span class="form-check">
 						        {{__('categorias.formacion.8')}}
 						    </span>
 						</label>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
-						    <input @if($user->formacion & 16) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="16"/>
+						    <input disabled @if($user->formacion & 16) checked @endif name="formacion[]" class="form-check-input" type="checkbox" value="16"/>
 						    <span class="form-check">
 						        {{__('categorias.formacion.16')}}
 						    </span>
@@ -352,7 +352,7 @@
 				@endif
 				@if($user->perfil == 'influencer')
 					@if($user->engagement != '')
-					<div class="row px-3">
+					<div class="mt-4">
 						<h3 class="text-muted">Tipo de plataforma</h3>
 						<label class="form-check form-check-custom form-check-solid  form-check-sm mb-2">
 						    <input disabled @if($user->social_platform & 1) checked @endif name="social_platform[]" class="form-check-input" type="checkbox" value="1"/>

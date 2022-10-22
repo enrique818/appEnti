@@ -12,38 +12,38 @@
 				<div class="d-flex flex-wrap">
 					<div class="ms-4 mt-3 form-check form-switch form-check-custom form-check-solid">
 					    <input name="startup" class="form-check-input" checked type="checkbox" value="yes" id="startup"/>
-					    <label class="form-check-label" for="startup">
+					    <label class="form-check-label" for="startup">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					        {{__('categorias.startup')}}
 					    </label>
 					</div>
 					@if(auth()->user()->perfil == 'startup' || auth()->user()->isAdmin)
 					<div class="ms-4 mt-3 form-check form-switch form-check-custom form-check-solid">
 					    <input name="firma" class="form-check-input" checked type="checkbox" value="yes" id="firma"/>
-					    <label class="form-check-label" for="firma">
+					    <label class="form-check-label" for="firma">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					        {{__('categorias.firma')}}
 					    </label>
 					</div>
 					<div class="ms-4 mt-3 form-check form-switch form-check-custom form-check-solid">
 					    <input name="inversionista" class="form-check-input" checked type="checkbox" value="yes" id="inversionista"/>
-					    <label class="form-check-label" for="inversionista">
+					    <label class="form-check-label" for="inversionista">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					        {{__('categorias.inversionista')}}
 					    </label>
 					</div>
 					<div class="ms-4 mt-3 form-check form-switch form-check-custom form-check-solid">
 					    <input name="expertos" class="form-check-input" checked type="checkbox" value="yes" id="expertos"/>
-					    <label class="form-check-label" for="expertos">
+					    <label class="form-check-label" for="expertos">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					        {{__('categorias.expertos')}}
 					    </label>
 					</div>
 					<div class="ms-4 mt-3 form-check form-switch form-check-custom form-check-solid">
 					    <input name="mentores" class="form-check-input" checked type="checkbox" value="yes" id="mentores"/>
-					    <label class="form-check-label" for="mentores">
+					    <label class="form-check-label" for="mentores">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					        {{__('categorias.mentores')}}
 					    </label>
 					</div>
 					<div class="ms-4 mt-3 form-check form-switch form-check-custom form-check-solid">
 					    <input name="influencer" class="form-check-input" checked type="checkbox" value="yes" id="influencer"/>
-					    <label class="form-check-label" for="influencer">
+					    <label class="form-check-label" for="influencer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					        {{__('categorias.influencer')}}
 					    </label>
 					</div>

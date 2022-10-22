@@ -472,6 +472,14 @@ class UserController extends Controller
     {
         return view('template.panel.cursos.mine');
     }
+    public function verCursos()
+    {
+        return view('template.panel.cursos.grade');
+    }
+    public function detalleCursos()
+    {
+        return view('template.panel.cursos.detail');
+    }
 
     public function buscarCursos()
     {
@@ -485,6 +493,10 @@ class UserController extends Controller
      public function servicios()
     {
         return view('template.panel.servicios.services');
+    }
+    public function documentos()
+    {
+        return view('template.panel.documentos.documents');
     }
     public function valoracion()
     {
