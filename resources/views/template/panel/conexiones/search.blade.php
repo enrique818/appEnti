@@ -469,7 +469,23 @@
 									<option value="mas">{{__('categorias.experiencia.mas')}}</option>
 								</x-slot>
 							</x-select>
+							<x-select name="experiencias" label="Años de experiencia" placeholder="Seleccione sus Años de experiencia">
+								<x-slot name="values">
+									<option value="">Seleccione sus Años de experiencia</option>
+									<option value="1">{{__('categorias.experiencia.1')}}</option>
+									<option value="5">{{__('categorias.experiencia.5')}}</option>
+									<option value="10">{{__('categorias.experiencia.10')}}</option>
+									<option value="mas">{{__('categorias.experiencia.mas')}}</option>
+								</x-slot>
+							</x-select>
 							<x-select name="fundador" label="¿Ha sido fundador de alguna compañia?" placeholder="Seleccione si ha sido fundador de una compañia">
+								<x-slot name="values">
+									<option value="">Seleccione si ha sido fundador de una compañia</option>
+									<option value="si">Si</option>
+									<option value="no">No</option>
+								</x-slot>
+							</x-select>
+							<x-select name="fundadord" label="¿Ha sido fundador de alguna compañia?" placeholder="Seleccione si ha sido fundador de una compañia">
 								<x-slot name="values">
 									<option value="">Seleccione si ha sido fundador de una compañia</option>
 									<option value="si">Si</option>
@@ -624,7 +640,9 @@
 	let inp_equipo = document.getElementById('inp_equipo');
 	let capitalcontenedor = document.getElementById('capitalcontenedor');
 	let inp_experiencia = document.getElementById('inp_experiencia');
+	let inp_experiencias = document.getElementById('inp_experiencias');
 	let inp_fundador = document.getElementById('inp_fundador');
+	let inp_fundadord = document.getElementById('inp_fundadord');
 	let formacioncontenedor = document.getElementById('formacioncontenedor');
 	let inp_seguidores = document.getElementById('inp_seguidores');
 	let plataformacontenedor = document.getElementById('plataformacontenedor');
@@ -660,7 +678,13 @@
 	$('#inp_experiencia').change(() => {
 		buscar();
 	});
+	$('#inp_experiencias').change(() => {
+		buscar();
+	});
 	$('#inp_fundador').change(() => {
+		buscar();
+	});
+	$('#inp_fundadord').change(() => {
 		buscar();
 	});
 	$('#inp_seguidores').change(() => {
@@ -701,7 +725,7 @@
 		} else {
 			capitalcontenedor.classList.add('d-none');
 		}
-		if (value == 'expertos' || value == 'mentores') {
+		if (value == 'expertos') {
 			inp_experiencia.classList.remove('d-none');
 			inp_fundador.classList.remove('d-none');
 			experticiacontenedor.classList.remove('d-none');
@@ -709,6 +733,13 @@
 			inp_experiencia.classList.add('d-none');
 			inp_fundador.classList.add('d-none');
 			experticiacontenedor.classList.add('d-none');	
+		}
+		if (value == 'mentores') {
+			inp_experiencias.classList.remove('d-none');
+			inp_fundadord.classList.remove('d-none');
+		} else {
+			inp_experiencias.classList.add('d-none');
+			inp_fundadord.classList.add('d-none');	
 		}
 		if (value == 'inversionista') {
 			formacioncontenedor.classList.remove('d-none');

@@ -211,7 +211,10 @@ class UserController extends Controller
     {
         $user = auth()->user();
 
-        $chats = $user->chats;
+            $chats = $user->chats;
+      
+
+       
 
         $usuarios = [];
         $firma = $request->input('firma');

@@ -22,12 +22,7 @@ class ChatController extends Controller
         $this->authorize('view', $user);
         $me = auth()->user();
         $chat = Chat::chatWithUser($user)->first();
-        if (!$chat) {
-            $chat = Chat::create([
-                'user_one_id' => $me->id,
-                'user_two_id' => $user->id
-            ]);
-        }
+      dd($chat);
         return view('template.panel.conexiones.chat', ['user' => $user,  'chat' => $chat->with(['userOne', 'userTwo'])->where('id', $chat->id)->first()]);
     }
 
@@ -55,29 +50,41 @@ class ChatController extends Controller
      */
     public function store(User $user, StoreChatRequest $request)
     {
+        $this->authorize('view', $user);
+        $me = auth()->user();
         $chat = Chat::chatWithUser($user)->first();
-        if ($chat->user_one_id == $user->id) {
-            $type = 'two';
-        } else {
-            $type = 'one';
+
+        if (!$chat) {
+            $chat = Chat::create([
+                'user_one_id' => $me->id,
+                'user_two_id' => $user->id
+            ]);
+            
+        }else{
+
+            if ($chat->user_one_id == $user->id) {
+                $type = 'two';
+            } else {
+                $type = 'one';
+            }
+            $message = $chat->messages()->create([
+                'sender' => $type,
+                'mensaje' => $request->input('mensaje')
+            ]);
+    
+            $data = array(
+                'envia' => auth()->user()->nombre, 
+                'Recive' => $user->nombre,
+                'url' =>  strval('https://myenti.com/panel/usuarios/'.auth()->user()->id.'/chat'),            
+            );
+    
+            Mail::to($user->email)->send(new NuevoMensaje($data));
+            //return back()->with('success', 'Enviado exitosamente!');
+    
+            broadcast(new MessageSent($message))->toOthers();
+    
+            return ['status' => 'Message Sent!'];
         }
-        $message = $chat->messages()->create([
-            'sender' => $type,
-            'mensaje' => $request->input('mensaje')
-        ]);
-
-        $data = array(
-            'envia' => auth()->user()->nombre, 
-            'Recive' => $user->nombre,
-            'url' =>  strval('https://myenti.com/panel/usuarios/'.auth()->user()->id.'/chat'),            
-        );
-
-        Mail::to($user->email)->send(new NuevoMensaje($data));
-        //return back()->with('success', 'Enviado exitosamente!');
-
-        broadcast(new MessageSent($message))->toOthers();
-
-        return ['status' => 'Message Sent!'];
     }
 
     /**
